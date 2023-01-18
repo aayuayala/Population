@@ -10,8 +10,8 @@ import java.util.List;
 public class SortMethods {
     private List<City> temp = new ArrayList<City>();
 	/**
-	 *	Swaps two Integer objects in array arr
-	 *	@param arr		array of Integer objects
+	 *	Swaps two objects in arrayList arr
+	 *	@param arr		array of objects
 	 *	@param x		index of first object to swap
 	 *	@param y		index of second object to swap
 	 */
@@ -88,7 +88,8 @@ public class SortMethods {
 	
 	/**
 	 *	Merge Sort algorithm - in descending order (you implement)
-	 *	@param arr		array of Integer objects to sort
+	 *	@param arr		array of objects to sort
+	 *	@param isPop		determines whether to sort by population or name
 	 */
 	public List<City> mergeSort(List<City> arr, boolean isPop) {
         for(int i = 0; i<arr.size(); i++)
@@ -98,7 +99,13 @@ public class SortMethods {
         return arr;
 	
     }
-
+	/**
+	 *	recursive sort method for merge sort
+	 *	@param arr		array of objects to sort
+	 *	@param isPop		determines whether to sort by population or name
+	 *	@param start		start index of smaller arr
+	 *	@param end		end index of smaller arr
+	 */
     private void recSort(List<City> arr, int start, int end, boolean isPop)
     {
         if(end-start<2)
@@ -120,7 +127,14 @@ public class SortMethods {
 
         }
     }
-
+	/**
+	 *	merges smaller arrays
+	 *	@param arr		array of objects to sort
+	 *	@param isPop		determines whether to sort by population or name
+	 *	@param start		start index of smaller arr
+	 *	@param end		end index of smaller arr
+	 *	@param middle 		middle index of the arr to sort
+	 */
     private void merge(List<City> arr, int start, int middle, int end, boolean isPop)
     {
 
@@ -162,6 +176,11 @@ public class SortMethods {
 
     }
 
+	/**
+	 *	takes a sorted array and creates a new arr with cities that are in a certain state
+	 *	@param arr		array of objects to sort
+	 *	@param input		state name to match against
+	 */
     public List<City> stateMatch(List<City> arr, String input)
     {
         List<City> temp = new ArrayList<City>();
@@ -176,6 +195,11 @@ public class SortMethods {
         return temp;
     }
 
+	/**
+	 *	takes a sorted array and creates a new arr with cities that are have a certain name
+	 *	@param arr		array of objects to sort
+	 *	@param input		city name to match against
+	 */
     public List<City> nameMatch(List<City> arr, String input)
     {
         List<City> temp = new ArrayList<City>();
