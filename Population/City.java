@@ -3,8 +3,8 @@
  *	City data - the city name, state name, location designation,
  *				and population est. 2017
  *
- *	@author	
- *	@since	
+ *	@author	Aayushi Ayalasomayajula
+ *	@since	Jan 16 2023
  */
 public class City implements Comparable<City> {
 	
@@ -39,6 +39,15 @@ public class City implements Comparable<City> {
 
 	}
 
+	/**	Compare two cities populations or names
+	 *	@param other		the other City to compare
+	 *	@param pop		checks whether to compare the name or population
+	 *	@return				the following value:
+	 *		If not population return returns (this.name - other.name)
+	 *		If populations are different, then returns (this.population - other.population)
+	 *		else if states are different, then returns (this.state - other.state)
+	 *		else returns (this.name - other.name)
+	 */
 	public int compareTo(City other, boolean pop)
 	{	int num = this.population-other.population;
 
