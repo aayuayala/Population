@@ -34,6 +34,11 @@ public class Population {
 		pop.printMenu();
 	}
 	
+	/**
+	 * Reads the file
+	 * Precondition: called after the user selects a choice
+	 * @param args
+	 */
 	public List<City> readFile()
 	{
 		numCities = 0;
