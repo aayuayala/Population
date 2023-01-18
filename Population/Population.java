@@ -37,7 +37,7 @@ public class Population {
 	/**
 	 * Reads the file
 	 * Precondition: called after the user selects a choice
-	 * @param args
+	 * @param none
 	 */
 	public List<City> readFile()
 	{
@@ -173,6 +173,11 @@ public class Population {
 
 	}
 
+	/**
+	 * Prints array
+	 * Precondition: called by printMenu() after an array list is sorted.
+	 * @param none
+	 */
 	public void printArr(List<City> arr)
 	{
 		endMillisec = System.currentTimeMillis();
